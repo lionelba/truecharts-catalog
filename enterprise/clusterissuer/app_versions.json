@@ -1,13 +1,13 @@
 {
-    "6.1.8": {
+    "6.1.9": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/home/runner/work/catalog/catalog/enterprise/clusterissuer/6.1.8",
+        "location": "/home/runner/work/catalog/catalog/enterprise/clusterissuer/6.1.9",
         "last_update": "2024-01-15 18:33:04",
         "required_features": [],
-        "human_version": "latest_6.1.8",
-        "version": "6.1.8",
+        "human_version": "latest_6.1.9",
+        "version": "6.1.9",
         "chart_metadata": {
             "annotations": {
                 "max_scale_version": "23.10.2",
@@ -54,7 +54,7 @@
                 "https://cert-manager.io/"
             ],
             "type": "application",
-            "version": "6.1.8"
+            "version": "6.1.9"
         },
         "app_metadata": null,
         "schema": {
