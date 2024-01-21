@@ -39,8 +39,8 @@ metadata:
   name: {{ .name }}-ca
   namespace: {{ $namespace }}
 data:
-  tls.crt: {{ .crt | replace " " "\n" | b64enc }}
-  tls.key: {{ .key | replace " " "\n" | b64enc }}
+  tls.crt: {{ .crt | replace "-----BEGIN CERTIFICATE-----" "-----BEGINCERTIFICATE-----" | replace "-----END CERTIFICATE-----" "-----ENDCERTIFICATE-----" | replace " " "\n" | replace "-----BEGINCERTIFICATE-----" "-----BEGIN CERTIFICATE-----" | replace "-----ENDCERTIFICATE-----" "-----END CERTIFICATE-----" | b64enc }}
+  tls.key: {{ .key | replace "-----BEGIN PRIVATE KEY-----" "-----BEGINPRIVATEKEY-----" | replace "-----END PRIVATE KEY-----" "-----ENDPRIVATEKEY-----" | replace " " "\n" | replace "-----BEGINPRIVATEKEY-----" "-----BEGIN PRIVATE KEY-----" | replace "-----ENDPRIVATEKEY-----" "-----END PRIVATE KEY-----" | b64enc }}
 {{- end }}
 ---
 apiVersion: cert-manager.io/v1
